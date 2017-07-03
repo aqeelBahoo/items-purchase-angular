@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+<nav class="navbar navbar-default">
+    <div class="container">
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="">Invoice App</a>
+        </div>
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#invoices">Invoices</a>
+        </div>
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#products">Products</a>
+        </div>
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#customer">Customer</a>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div ng-view></div>
+</div>
+
+<script src="angular.js"></script>
+<script src="angular-route.js"></script>
+<script src="app.js"></script>
+<script src="invoiceCtrl.js"></script>
+<script src="productCtrl.js"></script>
+<script src="createProductsCtrl.js"></script>
+<script src="addToCartCtrl.js"></script>
+<script src="productsBuyItemCtrl.js"></script>
+<script src="customerCtrl.js"></script>
+</body>
+</html>

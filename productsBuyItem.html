@@ -1,0 +1,29 @@
+<div>
+    <h1 style="text-align: center">Items you selected</h1><br><br>
+    <table class="table table-hover">
+        <tr >
+            <th>Serial No</th>
+            <th>Item Name</th>
+            <th>Size</th>
+            <th>color</th>
+            <th>Quantity</th>
+            <th>Material</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="x in items track by $index">
+            <td>{{$index + 1}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.productSize}}</td>
+            <td>{{x.productColor}}</td>
+            <td>{{x.quantity}}</td>
+            <td>{{x.material}}</td>
+            <td>{{x.perItemPrice}}</td>
+            <td>{{x.total}}</td>
+            <td ng-click="removeItems($index)" class="glyphicon glyphicon-remove"></td>
+        </tr>
+    </table>
+    <button class="btn btn-primary" ng-click="buy()">Buy</button>
+    <h2 style="float: right">Total {{totalItemsPrice}}</h2>
+</div>

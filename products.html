@@ -1,0 +1,34 @@
+<div>
+    <h1 style="text-align: center">Products</h1>
+    <form>
+        <a href="#products/create">
+            <button class="btn btn-primary">
+                + Create New Products
+            </button>
+        </a>
+        <a href="#products/buy">
+            <button class="btn btn-primary" ng-click="addToCart()" style="text-align: right">Add to Cart Items</button>
+        </a>
+        <br><br>
+        <table class="table table-hover">
+            <tr>
+                <th>#</th>
+                <th>Item</th>
+                <th>Color</th>
+                <th>Size</th>
+                <th>Price</th>
+                <th></th>
+
+            </tr>
+            <tr ng-repeat="x in allProducts track by $index">
+                <td>{{$index + 1}}</td>
+                <td>{{x.name}}</td>
+                <td>{{x.productColor}}</td>
+                <td>{{x.productSize}}</td>
+                <td>{{x.perItemPrice}}</td>
+                <td><a><button class="btn btn-success" ng-click="selectProduct($index)">Add To Cart</button></a></td>
+                <td ng-click="removeProduct($index)" class="glyphicon glyphicon-remove"></td>
+            </tr>
+        </table>
+    </form>
+</div>
