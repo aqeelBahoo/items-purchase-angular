@@ -1,5 +1,6 @@
 var module = angular.module("myApp", ["ngRoute"])
 module.config(function ($routeProvider, $locationProvider) {
+    //$locationProvider.html5Mode(true);
     $locationProvider.hashPrefix("");
     $routeProvider.otherwise({redirectTo: "/"});
     $routeProvider
@@ -27,7 +28,9 @@ module.config(function ($routeProvider, $locationProvider) {
             templateUrl: "customer.html",
             controller: "customerCtrl"
         })
+
 })
+/*
 module.directive('collapse', function (){
   return {
       restrict: 'AE',
@@ -36,10 +39,10 @@ module.directive('collapse', function (){
           elem.collapse({toggle: true, parent: '#collapse-'+attr.target
 
           })
-         /* elem.on('click', function (){
+         /!* elem.on('click', function (){
               elem.collapse('toggle')
 
-          })*/
+          })*!/
       }
   }
-})
+})*/

@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+      <!--<base href="/">-->
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <script src="bootstrap/js/jquery.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="angular.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="invoiceCtrl.js"></script>
+    <script src="productCtrl.js"></script>
+    <script src="createProductsCtrl.js"></script>
+    <script src="addToCartCtrl.js"></script>
+    <script src="productsBuyItemCtrl.js"></script>
+    <script src="customerCtrl.js"></script>
+
 </head>
 <body ng-app="myApp">
 
-<nav class="navbar navbar-default">
+<nav class="nav navbar  navbar-inverse">
     <div class="container">
 
-        <div class="navbar-header">
-            <a class="navbar-brand" href="">Invoice App</a>
-        </div>
 
         <div class="navbar-header">
             <a class="navbar-brand" href="#invoices">Invoices</a>
@@ -33,14 +44,5 @@
     <div ng-view></div>
 </div>
 
-<script src="angular.js"></script>
-<script src="angular-route.js"></script>
-<script src="app.js"></script>
-<script src="invoiceCtrl.js"></script>
-<script src="productCtrl.js"></script>
-<script src="createProductsCtrl.js"></script>
-<script src="addToCartCtrl.js"></script>
-<script src="productsBuyItemCtrl.js"></script>
-<script src="customerCtrl.js"></script>
 </body>
 </html>

@@ -2,20 +2,13 @@ angular.module("myApp")
     .controller("customerCtrl", function($scope){
         var allUsers = localStorage.getItem("buyItems");
         allUsers = JSON.parse(allUsers);
+         console.log(allUsers)
         $scope.allUser = allUsers;
-        /*
-         if(customersDetails){
-         $scope.customers = [];
-         customersDetails = JSON.parse(customersDetails);
-         customersDetails.forEach(function(userDetail){
-         $scope.customers.push({'userName' : userDetail.userName,
-         'date': userDetail.date,
-         'totalPrice': userDetail.totalItemsPrice});
-         })
-         }*/
+
     })
 
 function handleCollapse(){
+    console.trace("cutomer controller");
     $('[data-toggle]').each(function(val, elem){
         var e = $(elem);
         $(e).on('click', function (){

@@ -1,63 +1,21 @@
-<h1>Customer</h1>
-<div ng-repeat="user in allUser">
-    <div id="collapse-{{$index}}"  class="btn" >{{user.userName}}</div>
-    <div class="collapse" collapse data-target="{{$index}}">
-        <table class="table">
-            <tr>
-                <th>Item Name</th>
-                <th>Size</th>
-                <th>Color</th>
-                <th>Quantity</th>
-                <th>Price</th>
-                <th>Total</th>
-            </tr>
-            <tr ng-repeat="product in user.products track by $index">
-                <td>{{product.name}}</td>
-                <td>{{product.productSize}}</td>
-                <td>{{product.productColor}}</td>
-                <td>{{product.quantity}}</td>
-                <td>{{product.perItemPrice}}</td>
-                <td>{{product.total}}</td>
-            </tr>
-        </table>
-    </div>
-</div>
+<h1 class="text-center">Customer</h1>
 
-<!--
-<table class="table">
+<table class="table table-hover  text-capitalize">
+    <thead>
     <tr>
         <th>Name</th>
         <th>Date</th>
-        <th>Total Price</th>
+        <th>Amount</th>
     </tr>
-    <tr ng-repeat="user in allUser track by $index">
+    </thead>
+    <tbody>
+    <tr ng-repeat="user in allUser">
         <td>{{user.userName}}</td>
         <td>{{user.date}}</td>
         <td>{{user.totalItemsPrice}}</td>
-        <table class="table">
-            <tr>
-                <th>Item Name</th>
-                <th>Size</th>
-                <th>Color</th>
-                <th>Quantity</th>
-                <th>Price</th>
-                <th>Total</th>
-            </tr>
-            <tr ng-repeat="product in user.products track by $index">
-                <td>{{product.name}}</td>
-                <td>{{product.productSize}}</td>
-                <td>{{product.productColor}}</td>
-                <td>{{product.quantity}}</td>
-                <td>{{product.perItemPrice}}</td>
-                <td>{{product.total}}</td>
-            </tr>
-        </table>
     </tr>
+    </tbody>
 </table>
--->
-
-
-
 
 
 

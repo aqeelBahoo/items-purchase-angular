@@ -1,6 +1,8 @@
 <div>
-    <h1 style="text-align: center">Invoices</h1>
-    <table class="table table-hover">
+    <h1 class="text-center">Invoices</h1>
+
+    <table class="table table-hover top-buffer">
+        <thead>
         <tr>
             <th>User Name</th>
             <th>Item Name</th>
@@ -12,16 +14,17 @@
             <th>Total</th>
             <th></th>
         </tr>
-        <tr ng-repeat="x in products track by $index">
-            <td>{{x.userName}}</td>
-            <td>{{x.name}}</td>
-            <td>{{x.productSize}}</td>
-            <td>{{x.productColor}}</td>
-            <td>{{x.quantity}}</td>
-            <td>{{x.date}}</td>
-            <td>{{x.perItemPrice}}</td>
-            <td>{{x.total}}</td>
-            <td ng-click="removeItems(x.id)" class="glyphicon glyphicon-remove"></td>
+        </thead>
+        <tr ng-repeat="user in products track by $index">
+            <td>{{user.userName}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.productSize}}</td>
+            <td>{{user.productColor}}</td>
+            <td>{{user.quantity}}</td>
+            <td>{{user.date}}</td>
+            <td>{{user.perItemPrice}}</td>
+            <td>{{user.total}}</td>
+            <td ng-click="removeItems(user.id)"><span class="glyphicon glyphicon-remove"></span></td>
         </tr>
     </table>
 </div>
